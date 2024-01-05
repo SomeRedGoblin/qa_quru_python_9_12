@@ -11,6 +11,10 @@ class RegistrationPage:
 
     def open(self):
         browser.open('/automation-practice-form')
+        browser.all('[id^=google_ads]').with_(timeout=10).wait_until(
+            have.size_less_than_or_equal(3)
+        )
+        browser.all('[id^=google_ads]').perform(command.js.remove)
 
     def fill_first_name(self, value):
         self.first_name.type(value)
