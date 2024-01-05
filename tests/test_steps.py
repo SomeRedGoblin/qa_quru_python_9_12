@@ -1,5 +1,4 @@
 import allure
-from selene import browser, by, be
 from allure_commons.types import Severity
 
 from model.pages.registration_page import RegistrationPage
